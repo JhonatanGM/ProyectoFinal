@@ -1,0 +1,75 @@
+.contenido {
+    background: rgb(4, 102, 201);
+    background: radial-gradient(circle, rgba(4, 102, 201, 0.7133228291316527) 100%, rgba(57, 194, 182, 1) 100%);
+}
+
+table {
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+td {
+    font-size: 0.9rem;
+}
+
+th {
+    font-size: 1.1rem;
+}
+
+.tbAlumno {
+    background-color: cadetblue;
+}
+
+.contenedor {
+    padding-top: 1rem;
+}
+
+.contenedorboton {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.btn-primary {
+    --bs-btn-hover-bg: #5f9ea0;
+    --bs-btn-bg: #448dd7;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+
+/* icono */
+
+section {
+    display: table;
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+}

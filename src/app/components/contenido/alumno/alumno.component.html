@@ -1,0 +1,65 @@
+<div class="form-group col-12">
+    <div class="col-12 contenedorboton">
+        <button mat-button mat-raised-button color="primary" (click)="nuevoAlumno()">nuevo alumno</button>
+    </div>
+
+    <div class="col-12 contenedor">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z10 tbAlumno">
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef appTitulos> Codigo</th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="nombreCompleto">
+                <th mat-header-cell *matHeaderCellDef appTitulos> Nombre Completo </th>
+                <td mat-cell *matCellDef="let element"> {{element | nombreCompleto}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="nombres">
+                <th mat-header-cell *matHeaderCellDef appTitulos> Nombres </th>
+                <td mat-cell *matCellDef="let element"> {{element.nombres | lowercase}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="aPaterno">
+                <th mat-header-cell *matHeaderCellDef appTitulos> Apellido Paterno </th>
+                <td mat-cell *matCellDef="let element"> {{element.aPaterno | lowercase}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="aMaterno">
+                <th mat-header-cell *matHeaderCellDef appTitulos> Apellido Materno </th>
+                <td mat-cell *matCellDef="let element"> {{element.aMaterno | lowercase}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="fechaNacimiento">
+                <th mat-header-cell *matHeaderCellDef appTitulos> Fecha Nacimiento </th>
+                <td mat-cell *matCellDef="let element"> {{element.fechaNacimiento}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="dni">
+                <th mat-header-cell *matHeaderCellDef appTitulos> Dni </th>
+                <td mat-cell *matCellDef="let element"> {{element.dni}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="correo">
+                <th mat-header-cell *matHeaderCellDef appTitulos> Correo </th>
+                <td mat-cell *matCellDef="let element"> {{element.correo | lowercase}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef=" ">
+                <th mat-header-cell *matHeaderCellDef class="col-1"> </th>
+                <td mat-cell *matCellDef=" let element ">
+                    <button mat-icon-button color="primary" aria-label="Example icon button with a home icon" (click)="editarAlumno(element)">
+                    <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button color="warn" aria-label="Example icon button with a home icon" (click)="eliminarAlumno(element)">
+                      <mat-icon>delete</mat-icon>
+                      </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns "></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns; "></tr>
+        </table>
+    </div>
+</div>

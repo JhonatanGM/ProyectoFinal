@@ -1,0 +1,11 @@
+.barraLateral {
+    display: inline-block;
+    justify-content: flex-start;
+    padding: 0rem 0.5rem 0 0;
+}
+
+.contenido {
+    display: inline-block;
+    position: absolute;
+    padding: 0.5rem 0.5rem 0 0;
+}
