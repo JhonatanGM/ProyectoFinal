@@ -26,7 +26,6 @@ export class AlumnoService {
   }
 
   public EliminarAlumno(alumno:Alumno): Observable<any>{
-    console.log("eliminar"+alumno);
     return this.http.post(this.BackEndUrl + this.ApiUrl + 'eliminar',alumno);
   }
 }
