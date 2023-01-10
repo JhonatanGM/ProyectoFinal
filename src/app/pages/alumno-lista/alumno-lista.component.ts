@@ -3,17 +3,18 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Alumno } from 'src/app/interface/alumno';
 import { AlumnoService } from 'src/app/services/alumno.service';
 
-import { AddEditAlumnoComponent } from 'src/app/components/modals/add-edit-alumno/add-edit-alumno.component';
+import { AddEditAlumnoComponent } from 'src/app/features/alumno/add-edit-alumno/add-edit-alumno.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { DeleteComponent } from '../../modals/delete/delete.component';
+import { DeleteComponent } from '../../features/alumno/delete/delete.component';
 
 @Component({
-  selector: 'app-alumno',
-  templateUrl: './alumno.component.html',
-  styleUrls: ['./alumno.component.css']
+  selector: 'app-alumno-lista',
+  templateUrl: './alumno-lista.component.html',
+  styleUrls: ['./alumno-lista.component.css']
 })
-export class AlumnoComponent implements OnInit {
+export class AlumnoListaComponent implements OnInit {
+
 
   displayedColumns: string[] = ['id', 'nombreCompleto', 'nombres', 'aPaterno','aMaterno','fechaNacimiento','dni','correo',' '];
   dataSource = new MatTableDataSource<Alumno>();
