@@ -26,7 +26,6 @@ import { HomeComponent } from '../pages/home/home.component';
 @NgModule({
   declarations: [
     DashboardLayoutComponent,
-    HomeComponent,
     AlumnoListaComponent,
     AddEditAlumnoComponent,
     DeleteComponent
